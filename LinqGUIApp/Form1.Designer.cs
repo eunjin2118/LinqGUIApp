@@ -33,9 +33,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +62,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "모두 보기";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -71,6 +72,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "1500원 이상 비싼 순서로 보기";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -80,10 +82,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "이름 내림차순으로 보기";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(LinqGUIApp.Product);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -96,6 +95,10 @@
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(LinqGUIApp.Product);
             // 
             // Form1
             // 
